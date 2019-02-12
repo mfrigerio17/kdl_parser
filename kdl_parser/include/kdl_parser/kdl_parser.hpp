@@ -61,8 +61,8 @@ bool treeFromFile(const std::string & file, KDL::Tree & tree);
  * \param tree The resulting KDL Tree
  * returns true on success, false on failure
  */
-KDL_PARSER_PUBLIC
-bool treeFromParam(const std::string & param, KDL::Tree & tree);
+//KDL_PARSER_PUBLIC
+//bool treeFromParam(const std::string & param, KDL::Tree & tree);
 
 /** Constructs a KDL tree from a string containing xml
  * \param xml A string containing the xml description of the robot
@@ -77,17 +77,17 @@ bool treeFromString(const std::string & xml, KDL::Tree & tree);
  * \param[out] tree The resulting KDL Tree
  * \return true on success, false on failure
  */
-KDL_PARSER_PUBLIC
-bool treeFromXml(const tinyxml2::XMLDocument * xml_doc, KDL::Tree & tree);
+//KDL_PARSER_PUBLIC
+//bool treeFromXml(const tinyxml2::XMLDocument * xml_doc, KDL::Tree & tree);
 
 /** Constructs a KDL tree from a TinyXML document
  * \param[in] xml_doc The document containing the xml description of the robot
  * \param[out] tree The resulting KDL Tree
  * returns true on success, false on failure
  */
-KDL_PARSER_PUBLIC
-KDL_PARSER_DEPRECATED("TinyXML API is deprecated, use the TinyXML2 version instead")
-bool treeFromXml(TiXmlDocument * xml_doc, KDL::Tree & tree);
+//KDL_PARSER_PUBLIC
+//KDL_PARSER_DEPRECATED("TinyXML API is deprecated, use the TinyXML2 version instead")
+//bool treeFromXml(TiXmlDocument * xml_doc, KDL::Tree & tree);
 
 /** Constructs a KDL tree from a URDF robot model
  * \param robot_model The URDF robot model

@@ -40,7 +40,7 @@
 #include "kdl_parser/kdl_parser.hpp"
 #include <kdl/chainfksolverpos_recursive.hpp>
 #include <kdl/frames_io.hpp>
-#include <urdf/model.h>
+#include <urdf_model/model.h>
 
 void printLink(const KDL::SegmentMap::const_iterator & link, const std::string & prefix)
 {
@@ -58,14 +58,8 @@ int main(int argc, char ** argv)
     std::cerr << "Expect xml file to parse" << std::endl;
     return -1;
   }
-  urdf::Model robot_model;
-  if (!robot_model.initFile(argv[1])) {
-    std::cerr << "Could not generate robot model" << std::endl;
-    return false;
-  }
-
   KDL::Tree my_tree;
-  if (!kdl_parser::treeFromUrdfModel(robot_model, my_tree)) {
+  if (!kdl_parser::treeFromFile(argv[1], my_tree)) {
     std::cerr << "Could not extract kdl tree" << std::endl;
     return false;
   }
